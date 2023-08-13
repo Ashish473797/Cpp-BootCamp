@@ -9,27 +9,12 @@ public:
     int data;
     Node *left;
     Node *right;
-    deque<int> st;
 
     Node(int val)
     {
         data = val;
         left = NULL;
         right = NULL;
-    }
-
-    int nthNode()
-    {
-        if (this == NULL)
-            return -1;
-        else
-        {
-            inOrder();
-            if(st.empty())
-            return -1;
-            else
-            return st.front();
-        }
     }
 
     void inOrder()
@@ -58,7 +43,8 @@ int main()
     root->right->right = new Node(7);
     root->right->right->right = new Node(15);
 
-    cout << endl << "N-th node in InOrder Traversal: " << root->nthNode();
+    cout << endl << "InOrder Traversal: ";
+    root->inOrder();
 
     return 0;
 }
