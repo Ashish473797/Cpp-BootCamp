@@ -1,4 +1,4 @@
-// Write a program to print 3rd level all node in a tree.
+// Write a program to print elements of a tree at a given level using recursion.
 
 #include<bits/stdc++.h>
 using namespace std;
