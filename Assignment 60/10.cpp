@@ -17,17 +17,29 @@ public:
         right = NULL;
     }
 
-    void inOrder()
+    int nNode()
+    {
+        Node *temp;
+        if(this == NULL)
+        return -1;
+        else
+        temp = nInOrder();
+        return temp->data;
+    }
+
+    Node* nInOrder()
     {
         if (this == NULL)
         {
-            return;
+            return NULL;
+        }
+        if (this->right == NULL)
+        {
+            return this;
         }
         else
         {
-            this->left->inOrder();
-            cout << this->data << " ";
-            this->right->inOrder();
+            this->right->nInOrder();
         }
     }
 };
@@ -43,8 +55,7 @@ int main()
     root->right->right = new Node(7);
     root->right->right->right = new Node(15);
 
-    cout << endl << "InOrder Traversal: ";
-    root->inOrder();
+    cout << endl << "Nth-Node in In-Order is: " << root->nNode() << endl;;
 
     return 0;
 }
