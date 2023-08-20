@@ -1,4 +1,4 @@
-// Write a program to search element in a  BST.
+// Write a program to find the maximum element in BST.
 
 #include<bits/stdc++.h>
 using namespace std;
