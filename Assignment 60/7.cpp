@@ -68,8 +68,8 @@ class Node
             }
             else if(level > 0)
             {
-                this->right->printLevel(level-1);
                 this->left->printLevel(level-1);
+                this->right->printLevel(level-1);
             }
         }
         
